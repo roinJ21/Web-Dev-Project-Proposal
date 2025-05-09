@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>KonsultaVet</title>
+     <link rel="stylesheet" href="styles.css" />
+     <script src="script.js" defer></script>  </head>
+   <body>
+     <header>
+       <nav class="navbar container">
+         <div class="logo-text">KonsultaVet</div>
+         <button class="burger" onclick="toggleMenu()" aria-label="Toggle navigation">
+           <span></span><span></span><span></span>
+         </button>
+         <ul class="nav-links">
+           <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>  <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+           <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+           <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+           <li><a href="#booking" class="nav-link" data-section="booking">Booking</a></li>  </ul>
+         <button class="login-button" onclick="toggleLogin()">Login</button>
+       </nav>
+     </header>
+   
+     <main>
+       <section class="hero" id="home">
+         <img src="KonsultaVetLogo.png" alt="KonsultaVet Logo" class="logo" />
+         <h1 id="content">Welcome to KonsultaVet – Trusted Care for Your Pets</h1>
+         <p>Providing expert veterinary services to keep your pets happy and healthy.</p>
+         <button onclick="showMessage('Schedule an Appointment Today!')">Book Now</button>
+         <div class="card-container">
+           <div class="card">
+             <img src="Pet Care.png" alt="Pet Care" />
+             <p>Trusted Pet Checkups</p>
+           </div>
+           <div class="card">
+             <img src="Pet Diet.png" alt="Pet Diet" />
+             <p>Healthy Pet Nutrition</p>
+           </div>
+           <div class="card">
+             <img src="Grooming.png" alt="Grooming" />
+             <p>Grooming and Comfort</p>
+           </div>
+         </div>
+       </section>
+   
+       <section class="info-section" id="about">
+         <h2>About Us</h2>
+         <div class="card-container">
+           <div class="card">
+             <img src="Vet Team.png" alt="Vet Team" />
+             <p>Experienced Veterinarians</p>
+           </div>
+           <div class="card">
+             <img src="Modern Facilities.png" alt="Clinic" />
+             <p>Modern Facilities</p>
+           </div>
+           <div class="card">
+             <img src="Mission.png" alt="Mission" />
+             <p>Our Pet-Centered Mission</p>
+           </div>
+         </div>
+       </section>
+   
+       <section class="info-section" id="services">
+         <h2>Our Services</h2>
+         <div class="card-container">
+           <div class="card">
+             <img src="Vaccinations & Exams.png" alt="Vaccinations" />
+             <p>Vaccinations & Exams</p>
+           </div>
+           <div class="card">
+             <img src="images/placeholder2.jpg" alt="Surgery" />
+             <p>Surgery & Emergency Care</p>
+           </div>
+           <div class="card">
+             <img src="images/placeholder3.jpg" alt="Wellness Plans" />
+             <p>Custom Wellness Plans</p>
+           </div>
+         </div>
+       </section>
+   
+       <section class="info-section" id="contact">
+         <h2>Contact Us</h2>
+         <p>📞 0994-517-9887</p>
+         <p>📧 ramelojiron@gmail.com</p>
+       </section>
+   
+       <section class="info-section" id="booking">
+         <h2>Book an Appointment</h2>
+         <form id="bookingForm" onsubmit="return validateForm(event)">
+           <input type="text" id="name" placeholder="Name" required />
+           <input type="email" id="email" placeholder="Email" required />
+           <input type="date" id="date" required />
+           <input type="text" id="petType" placeholder="Type of Pet" required />
+           <textarea id="reason" placeholder="Reason for Visit" required></textarea>
+           <button type="submit">Submit</button>
+           <p id="formMessage"></p>
+         </form>
+       </section>
+     </main>
+   
+     <div id="loginModal" class="modal">
+       <div class="modal-content">
+         <h2>Login</h2>
+         <input type="text" placeholder="Username" /><br />
+         <input type="password" placeholder="Password" /><br />
+         <button onclick="toggleLogin()">Close</button>
+         <button>Submit</button>
+       </div>
+     </div>
+   
+     <footer class="container">
+       <p>&copy; 2025 KonsultaVet. All rights reserved.</p>
+     </footer>
+   </body>
+   </html>
